@@ -1,0 +1,5 @@
+package org.traccar.webservice;
+
+public class UserWebservice {
+
+}

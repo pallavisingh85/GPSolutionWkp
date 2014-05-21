@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DataWebserviceService WSDL service -->
+
+  <service name="DataWebservice" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://webservice.traccar.org"/>
+      <parameter name="wsdlServiceElement" value="DataWebserviceService"/>
+      <parameter name="schemaQualified" value="http://webservice.traccar.org"/>
+      <parameter name="wsdlServicePort" value="DataWebservice"/>
+      <parameter name="className" value="org.traccar.webservice.DataWebservice"/>
+      <parameter name="wsdlPortType" value="DataWebservice"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://webservice.traccar.org" xmlns:retNS="http://webservice.traccar.org" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayPlainTextHello" qname="operNS:sayPlainTextHello" returnQName="retNS:sayPlainTextHelloReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://webservice.traccar.org" xmlns:retNS="http://webservice.traccar.org" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHtmlHello" qname="operNS:sayHtmlHello" returnQName="retNS:sayHtmlHelloReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://webservice.traccar.org" xmlns:retNS="http://webservice.traccar.org" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayXMLHello" qname="operNS:sayXMLHello" returnQName="retNS:sayXMLHelloReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="sayXMLHello sayPlainTextHello sayHtmlHello"/>
+
+  </service>
+</deployment>

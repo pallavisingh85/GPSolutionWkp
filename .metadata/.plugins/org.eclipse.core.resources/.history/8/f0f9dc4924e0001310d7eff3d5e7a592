@@ -1,0 +1,5 @@
+package org.traccar.database;
+
+public class DatabaseManager {
+
+}

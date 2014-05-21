@@ -1,0 +1,8 @@
+package org.traccar.webservice;
+
+public class Snippet {
+	public static void main(String[] args) {
+		org.traccar.webservice
+	}
+}
+

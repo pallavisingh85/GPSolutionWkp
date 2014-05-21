@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservice.traccar.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice.traccar.org" xmlns:intf="http://webservice.traccar.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://webservice.traccar.org" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="sayPlainTextHello">
+    <complexType/>
+   </element>
+   <element name="sayPlainTextHelloResponse">
+    <complexType>
+     <sequence>
+      <element name="sayPlainTextHelloReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sayHtmlHello">
+    <complexType/>
+   </element>
+   <element name="sayHtmlHelloResponse">
+    <complexType>
+     <sequence>
+      <element name="sayHtmlHelloReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sayXMLHello">
+    <complexType/>
+   </element>
+   <element name="sayXMLHelloResponse">
+    <complexType>
+     <sequence>
+      <element name="sayXMLHelloReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="sayHtmlHelloResponse">
+
+      <wsdl:part element="impl:sayHtmlHelloResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayPlainTextHelloRequest">
+
+      <wsdl:part element="impl:sayPlainTextHello" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayXMLHelloResponse">
+
+      <wsdl:part element="impl:sayXMLHelloResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayHtmlHelloRequest">
+
+      <wsdl:part element="impl:sayHtmlHello" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayPlainTextHelloResponse">
+
+      <wsdl:part element="impl:sayPlainTextHelloResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sayXMLHelloRequest">
+
+      <wsdl:part element="impl:sayXMLHello" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="DataWebservice">
+
+      <wsdl:operation name="sayPlainTextHello">
+
+         <wsdl:input message="impl:sayPlainTextHelloRequest" name="sayPlainTextHelloRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sayPlainTextHelloResponse" name="sayPlainTextHelloResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayHtmlHello">
+
+         <wsdl:input message="impl:sayHtmlHelloRequest" name="sayHtmlHelloRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sayHtmlHelloResponse" name="sayHtmlHelloResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayXMLHello">
+
+         <wsdl:input message="impl:sayXMLHelloRequest" name="sayXMLHelloRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sayXMLHelloResponse" name="sayXMLHelloResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DataWebserviceSoapBinding" type="impl:DataWebservice">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="sayPlainTextHello">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sayPlainTextHelloRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sayPlainTextHelloResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayHtmlHello">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sayHtmlHelloRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sayHtmlHelloResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sayXMLHello">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sayXMLHelloRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sayXMLHelloResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DataWebserviceService">
+
+      <wsdl:port binding="impl:DataWebserviceSoapBinding" name="DataWebservice">
+
+         <wsdlsoap:address location="http://localhost:8080/GPSolutionServer/services/DataWebservice"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

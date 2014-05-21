@@ -1,0 +1,50 @@
+package org.traccar.database;
+
+import java.sql.Connection;
+
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import org.traccar.helper.Constants;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+public class DatabaseManager {
+	
+	private static DataSource dataSource = null;
+	
+	private DatabaseManager() {
+	}
+	
+
+	public Connection getDBConnection(){
+		Connection dbConnection = null;
+		try{
+			if(null == dataSource){
+				createDatasource(dataSource);
+			}
+			
+		}catch(Exception e){
+			
+		}
+		return null;
+	}
+	
+	private DataSource createDatasource(){
+		
+		
+		InitialContext ctx = null;
+		
+		try{
+			
+			ctx = new InitialContext();
+			MysqlDataSource dataSource = new MysqlDataSource();
+			dataSource.setUrl(Constants.MYSQL_DB_URL);
+			dataSource.setUser(Constants.MYSQL_DB_USERNAME);
+			dataSource.setPassword(Constants.MYSQL_DB_PASSWORD);
+		}catch(Exception e){
+			
+		}
+		return null;
+	}
+}

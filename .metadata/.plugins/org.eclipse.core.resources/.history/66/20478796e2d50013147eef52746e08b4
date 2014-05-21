@@ -1,0 +1,6 @@
+package org.traccar.webservice;
+
+@Path("/dataservice")
+public class DataWebservice {
+
+}

@@ -1,0 +1,5 @@
+package org.traccar.helper;
+
+public class Constants {
+
+}

@@ -1,0 +1,8 @@
+package org.traccar.webservice;
+
+import javax.ws.rs.Path;
+
+@Path("\userwebservice")
+public class UserWebservice {
+
+}

@@ -1,0 +1,30 @@
+package org.traccar.database;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+public class DatabaseManager {
+	
+	private static DataSource dataSource = null;
+	
+	private DatabaseManager() {
+	}
+	
+
+	public Connection getDBConnection(){
+		Connection dbConnection = null;
+		try{
+			if(null == dataSource){
+				createDataSource();
+			}
+			
+		}catch(Exception e){
+			
+		}
+	}
+	
+	private DataSource createDatasource(){
+		return null;
+	}
+}

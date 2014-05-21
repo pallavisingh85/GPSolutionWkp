@@ -1,0 +1,7 @@
+package org.traccar.model;
+
+public class DeviceProducer {
+	public String latitude;
+	public String longitude;
+
+}
